@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kemberland</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -164,7 +164,31 @@
             .time-card { width: 75px; padding: 10px 0; }
             .time-num { font-size: 1.6rem; }
         }
-    </style>
+    
+.save-the-date{
+font-family:'Great Vibes',cursive;
+font-size:2.8rem;
+border:none;
+padding:0;
+letter-spacing:.02em;
+animation:fadeIn 2s ease;
+}
+.map-link{
+display:inline-block;
+margin-top:12px;
+padding:10px 18px;
+border-radius:999px;
+background:#fff;
+text-decoration:none;
+color:var(--primary);
+box-shadow:0 6px 15px rgba(0,0,0,.08);
+}
+.hero{
+min-height:100svh !important;
+background-attachment:fixed;
+}
+
+</style>
 </head>
 <body>
 
@@ -176,7 +200,7 @@
 
     <header class="hero" id="about">
         <h1 class="hero-title">Ken & Embr</h1>
-        <p class="hero-subtitle"><em>Save the Date!</em></p>
+        <p class="hero-subtitle save-the-date">Save the Date</p>
     </header>
 
     <div class="countdown-container">
@@ -193,6 +217,7 @@
             <div class="info-block">
                 <p class="info-time" style="font-size: 1.6rem; margin-bottom: 5px;">2027 . 03 . 20 SAT</p>
                 <p class="info-title" style="font-size: 1.3rem; color: var(--primary);"><span class="no-wrap">孫立人將軍官邸</span></p>
+<p><a href="https://maps.google.com/?q=孫立人將軍官邸" target="_blank" class="map-link">📍 Google Map 導航</a></p>
             </div>
 
             <div class="transport-accordion" id="transport-accordion">
@@ -295,7 +320,7 @@
 
                 <div class="form-group">
                     <label class="form-label">有話想說<span>BLESSINGS</span></label>
-                    <textarea name="entry.319392915" class="form-control" rows="4" placeholder="想說一些悄悄話..."></textarea>
+                    <textarea name="entry.1628153456" class="form-control" rows="4" placeholder="想說一些悄悄話..."></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">確認送出 SUBMIT</button>
