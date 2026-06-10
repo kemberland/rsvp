@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kemberland</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Meow+Script&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -48,11 +48,17 @@
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             color: #ffffff; text-align: center; padding: 0 20px;
         }
+        
         .hero-title {
-            font-family: 'Cormorant Garamond', font-size: 3.5rem; font-weight: 300;
-            font-style: italic; margin-bottom: 10px; letter-spacing: 0.02em;
+            font-family: 'Meow Script', cursive; 
+            font-size: 6.5rem; 
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: 0.02em;
             animation: fadeIn 1.8s ease;
+            line-height: 1.1;
         }
+        
         .hero-subtitle {
             font-size: 1.2rem; font-weight: 300; letter-spacing: 0.15em;
             border-top: 1px solid rgba(255,255,255,0.6); border-bottom: 1px solid rgba(255,255,255,0.6);
@@ -158,37 +164,40 @@
         }
 
         @media (max-width: 600px) {
-            .hero-title { font-size: 2.6rem; }
+            .hero-title { font-size: 4.5rem; }
             .v-card { padding: 35px 20px; }
             .countdown-container { gap: 8px; padding: 40px 10px; }
             .time-card { width: 75px; padding: 10px 0; }
             .time-num { font-size: 1.6rem; }
         }
-    
-.save-the-date{
-font-family:'Caveat',
-font-size:0.8rem;
-border:none;
-padding:0;
-letter-spacing:.0em;
-animation:fadeIn 2s ease;
-}
-.map-link{
-display:inline-block;
-margin-top:12px;
-padding:10px 18px;
-border-radius:999px;
-background:#fff;
-text-decoration:none;
-color:var(--primary);
-box-shadow:0 6px 15px rgba(0,0,0,.08);
-}
-.hero{
-min-height:100svh !important;
-background-attachment:fixed;
-}
-
-</style>
+        
+        /* 套用 Meow Script 字體的自訂樣式 */
+        .save-the-date {
+            font-family: 'Meow Script', cursive;
+            font-size: 4.5rem; 
+            border: none;
+            padding: 0;
+            letter-spacing: .0em;
+            animation: fadeIn 2s ease;
+            background: none;
+        }
+        
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: #fff;
+            text-decoration: none;
+            color: var(--primary);
+            box-shadow: 0 6px 15px rgba(0,0,0,.08);
+        }
+        
+        .hero {
+            min-height: 100svh !important;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
 
@@ -218,10 +227,10 @@ background-attachment:fixed;
                 <p class="info-time" style="font-size: 1.6rem; margin-bottom: 5px;">2027 . 03 . 20 SAT</p>
                 <p class="info-title" style="font-size: 1.3rem; color: var(--primary);"><span class="no-wrap">孫立人將軍官邸</span></p>
             </div>
+            
             <div class="transport-accordion" id="transport-accordion">
                 <div class="transport-accordion-header" onclick="toggleTransport()">
-                    <span>交通指引 TRANSPORTATION</span>
-                    <p><a href="https://maps.google.com/?q=孫立人將軍官邸" target="_blank" class="map-link">📍Google Map</a></p>
+                    <span>交通指引 TRANSPORTATION</span>   
                 </div>
                 <div class="transport-accordion-content" id="transport-content">
                     <div class="transport-accordion-body">
@@ -233,6 +242,7 @@ background-attachment:fixed;
                             <strong>開車資訊：</strong><br>
                             官邸內車位有限，敬請提早抵達。
                         </p>
+                        <p><a href="https://maps.google.com" target="_blank" class="map-link">📍Google Map</a></p>
                     </div>
                 </div>
             </div>
@@ -312,7 +322,6 @@ background-attachment:fixed;
                     <div class="form-group">
                         <label class="form-label">飲食需求<span>DIETARY PRIVILEGE</span></label>
                         <input type="text" name="entry.319392915" class="form-control" required placeholder="例如：蛋奶素、海鮮過敏">
-                        </select>
                     </div>
                 </div>
 
@@ -375,13 +384,13 @@ background-attachment:fixed;
             msg.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
-    });
+            });
 
-    setTimeout(() => {
-        form.reset();
-        document.getElementById('conditional-fields').style.display = 'none';
-    }, 500);
-}
+            setTimeout(() => {
+                form.reset();
+                document.getElementById('conditional-fields').style.display = 'none';
+            }, 500);
+        }
     </script>
 </body>
 </html>
