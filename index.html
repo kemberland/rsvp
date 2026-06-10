@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kemberland</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Meow+Script&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Meow+Script&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -43,16 +43,17 @@
         .navbar a:hover { color: var(--primary); }
 
         .hero {
-            height: 100vh;
+            min-height: 100svh;
             background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://i.postimg.cc/X7y7YxTF/456-2.jpg') center/cover no-repeat;
+            background-attachment: fixed;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             color: #ffffff; text-align: center; padding: 0 20px;
         }
         
         .hero-title {
-            font-family: 'Meow Script', cursive; 
-            font-size: 6.5rem; 
-            font-weight: 0;
+            font-family: 'Meow Script', cursive;
+            font-size: 96px;
+            font-weight: 400;
             margin-bottom: 10px;
             letter-spacing: 0.02em;
             animation: fadeIn 1.8s ease;
@@ -60,9 +61,16 @@
         }
         
         .hero-subtitle {
-            font-size: 1.2rem; font-weight: 300; letter-spacing: 0.15em;
-            border-top: 1px solid rgba(255,255,255,0.6); border-bottom: 1px solid rgba(255,255,255,0.6);
-            padding: 8px 20px; margin-top: 10px; animation: fadeIn 2.2s ease;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 31px;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 0.15em;
+            border-top: 1px solid rgba(255,255,255,0.6);
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+            padding: 8px 20px;
+            margin-top: 10px;
+            animation: fadeIn 2.2s ease;
         }
 
         .countdown-container {
@@ -164,15 +172,14 @@
         }
 
         @media (max-width: 600px) {
-            .hero-title { font-size: 4.5rem; }
+            .hero-title { font-size: 64px; }
+            .hero-subtitle { font-size: 22px; }
             .v-card { padding: 35px 20px; }
             .countdown-container { gap: 8px; padding: 40px 10px; }
             .time-card { width: 75px; padding: 10px 0; }
             .time-num { font-size: 1.6rem; }
         }
-        
-        /* 套用 Meow Script 字體的自訂樣式 */
-        
+
         .map-link {
             display: inline-block;
             margin-top: 10px;
@@ -182,11 +189,6 @@
             text-decoration: none;
             color: var(--primary);
             box-shadow: 0 6px 10px rgba(0,0,0,.08);
-        }
-        
-        .hero {
-            min-height: 100svh !important;
-            background-attachment: fixed;
         }
     </style>
 </head>
@@ -199,8 +201,8 @@
     </nav>
 
     <header class="hero" id="about">
-        <h1 class="hero-title"Save the Date!></h1>
-        <p class="hero-subtitle"Ken & Ember></p>
+        <h1 class="hero-title">Save the Date!</h1>
+        <p class="hero-subtitle">Ken &amp; Ember</p>
     </header>
 
     <div class="countdown-container">
@@ -372,11 +374,7 @@
             const form = document.querySelector('form');
             const msg = document.getElementById('success-message');
             msg.style.display = 'block';
-            msg.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-
+            msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             setTimeout(() => {
                 form.reset();
                 document.getElementById('conditional-fields').style.display = 'none';
